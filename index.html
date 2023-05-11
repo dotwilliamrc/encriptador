@@ -3,10 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Título del documento</title>
+  <title>Encriptador</title>
+	<link rel="preload" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" as="style" />
+	<link rel="preload" href="style.css" as="style" />
+	
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+	<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Contenido del documento -->
-  
+	<main class="container">
+		<form class="form">
+			<textarea class="form__menssage" placeholder="Ingrese el texto aqui"></textarea>
+			<div class="form__buttons">
+				<input type="button" class="button" value="Desencriptar" />
+				<input type="button" class="button--transparent" value="Encriptar" />
+			</div>
+		</form>
+		<section class="response">
+			<div class="response__message--void">
+				<h2 class="response__title">Ningún mensaje fue encontrado</h2>
+				<p class="response__paragraph">Ingresa el texto que desees encriptar o desencriptar.</p>
+			</div>
+			<div class="response__message--full">
+			</div>
+		</section>
+	</main>
 </body>
 </html>
