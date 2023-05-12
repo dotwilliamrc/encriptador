@@ -6,6 +6,10 @@
   <title>Encriptador</title>
 	<link rel="preload" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" as="style" />
 	<link rel="preload" href="style.css" as="style" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> 
 	
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
 	<link rel="stylesheet" href="style.css" />
@@ -13,10 +17,11 @@
 <body>
 	<main class="container">
 		<form class="form">
-			<textarea class="form__menssage" placeholder="Ingrese el texto aqui"></textarea>
+			<textarea class="form__message" placeholder="Ingrese el texto aqui"></textarea>
+			<p class="form__alert">Solo letras minúsculas y sin acentos</p>
 			<div class="form__buttons">
-				<input type="button" class="button" value="Desencriptar" />
-				<input type="button" class="button--transparent" value="Encriptar" />
+				<input type="button" class="button button--filled" value="Desencriptar" />
+				<input type="button" class="button button--transparent" value="Encriptar" />
 			</div>
 		</form>
 		<section class="response">
