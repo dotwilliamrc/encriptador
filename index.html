@@ -19,14 +19,14 @@
 <body>
 	<main class="container">
 		<form class="form">
-			<textarea class="form__message" placeholder="Ingrese el texto aqui"></textarea>
+			<textarea class="form__message" id="textInput" placeholder="Ingrese el texto aqui"></textarea>
 			<p class="form__alert">
 				<i class="fa-solid fa-circle-info"></i>
 				Solo letras minúsculas y sin acentos
 			</p>
 			<div class="form__buttons">
-				<input type="button" class="button button--filled" value="Desencriptar" />
-				<input type="button" class="button button--transparent" value="Encriptar" />
+				<input type="button" id="encrypt" class="button button--filled" value="Encriptar" />
+				<input type="button" id="dencrypt" class="button button--transparent" value="Desencriptar" />
 			</div>
 		</form>
 		<section class="response">
@@ -36,8 +36,12 @@
 				<p class="response__paragraph">Ingresa el texto que desees encriptar o desencriptar.</p>
 			</div>
 			<div class="response__message--full">
+				<p class="response__text" id="outputMessage"></p>
+				<input type="button" id="copy" class="button button--transparent" value="Copiar" />
 			</div>
 		</section>
 	</main>
+
+	<script src="./script.js"></script>
 </body>
 </html>

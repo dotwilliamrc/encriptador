@@ -28,27 +28,22 @@ body {
 	width: 100%;
 	height: 100vh;
 	padding: 1.6rem;
-	display: flex;
-	flex-direction: column;
 	gap: 3rem;
-}
-
-.form {
-	flex-grow: 1;
-	flex-basis: 50%;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 6fr 4fr;
 }
 
 @media (min-width: 900px) {
 	.container {
-		flex-direction: row;
+		grid-template-columns: 3fr 1fr;
+		grid-template-rows: 1fr;
 	}
+}
 
-	.form {
-		flex-grow: 0;
-		flex-basis: 80%;
-	}
+.form {
+	display: flex;
+	flex-direction: column;
 }
 
 .form__message {
@@ -120,9 +115,11 @@ body {
 .response {
 	padding: 2rem;
 	display: flex;
+	gap: 3.2rem;
 	background-color: var(--white);
 	border-radius: 3.2rem;
 	box-shadow: 7px 7px 42px -5px var(--grey-shadow);
+	overflow: hidden;
 }
 
 .response__message--void {
@@ -155,4 +152,27 @@ body {
 .response__paragraph {
 	margin: 0;
 	color: var(--grey);
+}
+
+.response__message--full {
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+	width: 100%;
+}
+
+.response__text {
+	font-size: 2.4rem;
+	color: var(--grey);
+	overflow-wrap: break-word;
+	margin: 0;
+	width: 100%;
+	overflow: scroll;
+	flex-grow: 1;
+}
+
+#copy {
+	flex-basis: 0;
+	flex-grow: 0;
 }
