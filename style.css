@@ -1,6 +1,10 @@
 :root {
 	--dark-blue: #0A3871;
 	--grey: #495057;
+	--grey-shadow: rgba(73, 80, 87, 0.3);
+	--grey-dark: #343A40;
+	--light-blue: #F3F5FC;
+	--white: #FFFFFF;
 	--standar-font: 'Inter', sans-serif;
 }
 
@@ -13,6 +17,7 @@ body {
 	font-size: 160%;
 	font-family: var(--standar-font);
 	margin: 0;
+	background-color: var(--light-blue);
 }
 
 *, *::before, *::after {
@@ -50,13 +55,22 @@ body {
 	width: 100%;
 	padding: 2rem;
 	border: none;
+	border-radius: 2.4rem;
 	color: var(--dark-blue);
 	font-size: 3.2rem;
 	flex-grow: 1;
+	background-color: var(--light-blue);
+	resize: none;
+}
+
+.form__message:focus {
+	border: 0.1rem solid var(--dark-blue);
 }
 
 .form__alert {
 	margin:1.6rem 0;
+	font-size: 1.2rem;
+	color: gray
 }
 
 .form__buttons {
@@ -68,4 +82,77 @@ body {
 .button {
 	flex-basis: 20rem;
 	flex-grow: 1;
+}
+
+.button {
+	border-radius: 2.4rem;
+	border: none;
+	padding: 2.4rem;
+	transition-property: opacity;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in;
+}
+
+.button:hover {
+	opacity: 0.7;
+}
+
+.button--filled {
+	background-color: var(--dark-blue);
+	color: var(--white);
+}
+
+.button--transparent {
+	background-color: transparent;
+	color: var(--dark-blue);
+	border: 0.1rem solid var(--dark-blue);
+	transition-property: background-color, color;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in;
+}
+
+.button--transparent:hover {
+	background-color: var(--dark-blue);
+	color: var(--white);
+	opacity: 1;
+}
+
+.response {
+	padding: 2rem;
+	display: flex;
+	background-color: var(--white);
+	border-radius: 3.2rem;
+	box-shadow: 7px 7px 42px -5px var(--grey-shadow);
+}
+
+.response__message--void {
+	text-align: center;
+	display: grid;
+	align-content: center;
+	width: 100%;
+}
+	
+.response__image {	
+	display: none;
+}
+
+@media (min-width: 900px) {
+	.response__image {
+		display: block;
+		width: 70%;
+		margin: 0 auto 3.2rem auto;
+	}
+}
+
+.response__title {
+	font-size: 2.4rem;
+	color: var(--grey-dark);
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 1.6rem;
+}
+
+.response__paragraph {
+	margin: 0;
+	color: var(--grey);
 }
